@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base" content="https://dotdotdiff.com">
+
+    
+    <title>DotDotDiff • Scoop e Winget - Gerenciando programas no Windows</title>
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+        
+            <link rel="stylesheet" href="https://dotdotdiff.com/custom_subset.css?h=0b9535a28bc3d5bf2321">
+        
+    
+
+    
+        <link rel="stylesheet" href="https://dotdotdiff.com/main.css?h=4a3dff148c520f191505" />
+
+    <meta name="color-scheme" content="light dark" />
+        <meta name="description" content="Hoje vamos conhecer o Scoop e Winget, gerenciadores de pacote que facilitam nossa vida ao instalar programas no windows" />
+        <meta property="og:description" content="Hoje vamos conhecer o Scoop e Winget, gerenciadores de pacote que facilitam nossa vida ao instalar programas no windows" />
+
+    
+        <meta name="robots" content="index, nofollow" />
+    
+
+    <meta property="og:title" content="Scoop e Winget - Gerenciando programas no Windows" />
+    <meta property="og:type" content="article" />
+
+    
+    
+    
+    
+        
+    
+
+    
+
+    
+    
+    
+        
+    
+    
+
+    
+        
+        
+    
+
+    <meta property="og:image" content="https://dotdotdiff.com/blog/blog.jpg?h=f375947d5b252b336e60" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:image" content="https://dotdotdiff.com/blog/blog.jpg?h=f375947d5b252b336e60" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+<meta property="og:locale" content="pt_BR" />
+
+    <meta property="og:url" content="https:&#x2F;&#x2F;dotdotdiff.com&#x2F;blog&#x2F;scoop-winget-gerenciadores-de-pacote&#x2F;" /><meta property="og:site_name" content="DotDotDiff">
+        <noscript><link rel="stylesheet" href="https://dotdotdiff.com/no_js.css"/></noscript>
+        <script type="text/javascript" src="https://dotdotdiff.com/js/initializeTheme.min.js"></script>
+        <script defer src="https://dotdotdiff.com/js/themeSwitcher.min.js"></script>
+        <script defer src="https://dotdotdiff.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
+        <script defer src="https://dotdotdiff.com/js/lunr/lunrStemmerSupport.min.js"></script>
+            <script defer src="https://dotdotdiff.com/js/lunr/lunr.pt.min.js"></script></head>
+
+
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="nav-title">
+            <a class="home-title" href="https://dotdotdiff.com">DotDotDiff</a>
+        </div>
+            <div class="nav-navs">
+                <ul>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/blog/">
+                                blog
+                                </a>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/archive/">
+                                arquivo
+                                </a>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/tags/">
+                                tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/projects/">
+                                projetos
+                                </a>
+                            </li>
+                        <div class="nav-navs" id="menu-icons-group">
+                        <li class="js">
+                            <div role="button" tabindex="0" id="search-button" class="search-icon interactive-icon" title="Clique ou pressione $SHORTCUT para abrir a pesquisa" aria-label="Clique ou pressione $SHORTCUT para abrir a pesquisa">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                                </svg>
+                            </div>
+                        </li>
+
+                        
+                        
+
+                        <li class="theme-switcher-wrapper js"><div
+        title="Alternar para o modo escuro&#x2F;claro"
+        class="theme-switcher"
+        tabindex="0"
+        role="button"
+        aria-label="Alternar para o modo escuro"
+        aria-pressed="false">
+    </div><div
+        title="Resetar para o modo para o padrão"
+        class="theme-resetter arrow"
+        tabindex="0"
+        role="button"
+        aria-hidden="true"
+        aria-label="Resetar para o modo para o padrão">
+    </div>
+
+</li>
+</div>
+                </ul>
+            </div>
+        
+    </nav>
+</header>
+
+    <div class="content">
+
+        
+        
+
+
+
+
+<main>
+    <article>
+        <h1 class="article-title">
+            Scoop e Winget - Gerenciando programas no Windows
+        </h1>
+
+        <ul class="meta">
+                <li>15&#x2F;01&#x2F;2025</li><li title="621 palavras"><span class='separator' aria-hidden='true'>•</span>4 mins de leitura</li><li class="tag"><span class='separator' aria-hidden='true'>•</span>Tags:&nbsp;</li><li class="tag"><a href="https://dotdotdiff.com/tags/scoop/">scoop</a>,&nbsp;</li><li class="tag"><a href="https://dotdotdiff.com/tags/windows/">windows</a>,&nbsp;</li><li class="tag"><a href="https://dotdotdiff.com/tags/winget/">winget</a></li></ul><ul class="meta last-updated"><li>Atualizado em 15&#x2F;01&#x2F;2025</li><li><span class='separator' aria-hidden='true'>•</span><a href="https://github.com/dotdotdiff/dotdotdiff/commits/main/content/blog&#x2F;scoop-winget-gerenciadores-de-pacote&#x2F;index.md"  rel="">Ver alterações<small>&nbsp;<span class="arrow-corner">↗</span></small></a></li>
+        </ul>
+
+        <section class="body"><h1 id="o-que-sao-gerenciadores-de-pacotes"><a class="header-anchor no-hover-padding" href="#o-que-sao-gerenciadores-de-pacotes" aria-label="Anchor link for: o-que-sao-gerenciadores-de-pacotes"><span class="link-icon" aria-hidden="true"></span></a>
+O que são gerenciadores de pacotes?</h1>
+<p>Em resumo, gerenciadores de pacotes são centrais de programas que você pode baixar com alguns comandos.</p>
+<p>No windows ainda é algo um tanto incomum, já que por muitas vezes quando queremos instalar algum programa nós vamos no site oficial de determinado programa, baixamos o instalador dele e depois clicamos next até o final da jornada.</p>
+<p>Para facilitar na instalação e evitar baixar programas errados, podemos utilizar um repositório oficial que centraliza esses programas já filtrados e esse seria o papel principal do gerenciador de pacotes.</p>
+<p>Outra coisa também é o gerenciamento de dependências e atualizações de maneira mais fácil. Basta somente um comandinho e pimba, atualizamos tudo sem esquentarmos nossa cabeça.</p>
+<h1 id="winget-o-instalador-de-pacotes-oficial-da-microsoft"><a class="header-anchor no-hover-padding" href="#winget-o-instalador-de-pacotes-oficial-da-microsoft" aria-label="Anchor link for: winget-o-instalador-de-pacotes-oficial-da-microsoft"><span class="link-icon" aria-hidden="true"></span></a>
+Winget - O instalador de pacotes oficial da Microsoft</h1>
+<p>Esse daqui já vem pré instalado no windows então qualquer um pode utilizar a partir de já.</p>
+<p>se por exemplo, você abrir seu terminal, prompt de comando e digitar:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">winget</span></span><span class="z-meta z-function-call z-arguments z-shell"> install firefox</span>
+</span></code></pre>
+<p>você vai instalar o navegador firefox na última versão e já vai pode utilizar normalmente depois da instalação.</p>
+<p>para atualizar algum programa instalado basta fazer:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">winget</span></span><span class="z-meta z-function-call z-arguments z-shell"> upgrade nome_do_pacote</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">winget</span></span><span class="z-meta z-function-call z-arguments z-shell"> upgrade firefox //no nosso caso</span>
+</span></code></pre>
+<p>e caso não queira ir atualizando 1 por 1 basta digitar isso aqui:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">winget</span></span><span class="z-meta z-function-call z-arguments z-shell"> upgrade<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>all</span></span>
+</span></code></pre>
+<p>com isso todos os seus pacotes já vão ser atualizados bonitinho sem nenhuma dor de cabeça.</p>
+<p>E como eu sei se o programa que quero já existe no repositório do windows?</p>
+<p>Você pode dar um winget install e o nome do programa que você busca que ele já vai dizer se existe ou não ou também pode simplesmente acessar esse site aqui o <a href="https://winstall.app/">Winstall</a>  onde você vai ver de maneira bonitinha todos os pacotes e consegue até mesmo configurar um script pra instalar todos os apps que quer ao mesmo tempo.</p>
+<h1 id="scoop-o-instalador-de-coisas-avancadas-no-windows"><a class="header-anchor no-hover-padding" href="#scoop-o-instalador-de-coisas-avancadas-no-windows" aria-label="Anchor link for: scoop-o-instalador-de-coisas-avancadas-no-windows"><span class="link-icon" aria-hidden="true"></span></a>
+Scoop - O instalador de coisas avançadas no Windows</h1>
+<p>Apesar de não ser o gerenciador oficial da microsoft, o Scoop vem pra ser uma mão na roda para quem gosta de projetos Open Source no windows, já que hoje é por lá que muitos devs publicam seus apps, por ter uma política menos rigorosa para entrar.</p>
+<p>Sendo assim, instalaremos ele aqui para poder seguir tutoriais mais frente com coisas mais avançadas kkkk.</p>
+<p>Você por ir no site oficial do <a href="https://scoop.sh/#/">Scoop</a> ou rodar esse comando no seu powershell, aqui precisa ser o powershell mesmo e não o prompt de comando.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">Set-ExecutionPolicy</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>ExecutionPolicy</span> RemoteSigned<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>Scope</span> CurrentUser</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">Invoke-RestMethod</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>Uri</span> https://get.scoop.sh</span> <span class="z-keyword z-operator z-logical z-pipe z-shell">|</span> <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">Invoke-Expression</span></span>
+</span></code></pre>
+<p>Após a instalação vamos instalar nosso primeiro programinha para teste</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">scoop</span></span><span class="z-meta z-function-call z-arguments z-shell"> bucket add main</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">scoop</span></span><span class="z-meta z-function-call z-arguments z-shell"> install main/7zip</span>
+</span></code></pre>
+<p>Você deve tá notando que temos que adicionar esse bucket primeiro, que seria algo como uma ¨categoria" de programas, é um repositório dentro de um repositório.</p>
+<p>Em outras palavras, adicionando o main, podemos instalar os aplicativos do main, que é onde o 7zip está, existem buckets oficiais e alguns mantidos apenas pela comunidade.</p>
+<p>Vou deixar aqui os principais que utilizaremos em outros tutoriais.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">scoop</span></span><span class="z-meta z-function-call z-arguments z-shell"> bucket add main</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">scoop</span></span><span class="z-meta z-function-call z-arguments z-shell"> bucket add extras</span>
+</span></code></pre>
+<p>Com esses dois estaremos bem servidos.</p>
+<p>Viu como é fácil utilizar e instalar esses gerenciadores de pacote.</p>
+<h1 id="e-o-chocolatey-diff"><a class="header-anchor no-hover-padding" href="#e-o-chocolatey-diff" aria-label="Anchor link for: e-o-chocolatey-diff"><span class="link-icon" aria-hidden="true"></span></a>
+E o Chocolatey Diff?</h1>
+<p>Para pessoas mais antigas devem estar pensando no Choco, que também é um gerenciador de pacote do windows, mas ele vem sendo deixado de lado a favor do Scoop, além de sempre ter sido muito bugado.</p>
+<p>Então prefiro nem trazer ele aqui para vocês.</p>
+<h1 id="conclusao"><a class="header-anchor no-hover-padding" href="#conclusao" aria-label="Anchor link for: conclusao"><span class="link-icon" aria-hidden="true"></span></a>
+Conclusão</h1>
+<p>Com gerenciadores podemos instalar todos nossos programinhas sem nem precisar ir no navegador (caso saiba o nome né), também conseguimos atualizar todos sem problemas para evitar algum tipo de vulnerabilidade de versão.</p>
+<p>A partir daqui sempre que possível instalaremos as coisas via winget ou scoop. Nem todos os programas ainda vamos encontrar neles, mas a maioria já tá por aqui.</p>
+<p>Se sentirem alguma dificuldade podem deixar nos comentários e se tiverem algo a acrescentar também pode abrir uma issue lá no github com sugestões e melhorias.</p>
+<p>Espero manter esse projeto vivo o máximo de tempo que conseguir</p>
+
+        </section>
+
+        
+                
+                
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+            <nav class="full-width article-navigation">
+                <div></div>
+                <div><a href="https://dotdotdiff.com/blog/git-basico/" aria-label="Anterior" aria-describedby="right_title">Anterior&nbsp;<span class="arrow">→</span></a>
+                <p aria-hidden="true" id="right_title">Aprendendo o básico que você precisa de GIT</p></div>
+            </nav>
+        
+        
+
+        
+            
+            
+            
+
+            
+                
+                
+            
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+        
+        
+            
+
+<div id="comments" class="comments"
+
+
+    data-repo="dotdotdiff&#x2F;dotdotdiff"
+    data-repo-id="R_kgDONp6Oug"
+    data-category="Announcements"
+    data-category-id="DIC_kwDONp6Ous4CmCpy"
+    
+        data-mapping="specific"
+        data-term="scoop-winget-gerenciadores-de-pacote"
+    
+    data-strict="1"
+    data-reactions-enabled="1"
+    
+        data-input-position="top"
+    
+    data-light-theme="noborder_light"
+    data-dark-theme="noborder_dark"
+    
+        data-lang="pt"
+    
+    data-lazy-loading="true"
+    >
+
+
+
+
+    <script src="https://dotdotdiff.com/js/giscus.min.js" async></script>
+
+
+<noscript>You need JavaScript to view the comments.</noscript>
+</div>
+
+        
+
+    </article>
+</main>
+
+
+<span id="copy-success" class="hidden">
+        Copiado!
+    </span>
+    <span id="copy-init" class="hidden">
+        Copiar código para a área de transferência
+    </span>
+    <script defer src="https://dotdotdiff.com/js/copyCodeToClipboard.min.js"></script><script defer src="https://dotdotdiff.com/js/addSrcToCodeBlock.min.js"></script>
+    </div>
+    <footer>
+    <section>
+        <nav class="socials nav-navs"><ul>
+                        
+                            <li>
+                                <a class="nav-links no-hover-padding social" rel=" me"  href="https://github.com/dotdotdiff/dotdotdiff">
+                                    <img loading="lazy" alt="github" title="github" src="https://dotdotdiff.com/social_icons/github.svg">
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            
+        </nav>
+
+        
+        <nav class="nav-navs">
+        </nav>
+
+        <div class="credits">
+            <small>
+                
+
+                
+                Feito Com
+                <a rel=""  href="https://www.getzola.org">Zola</a>
+                e
+                <a rel=""  href="https://github.com/welpo/tabi">tabi</a>
+
+                •
+                    <a rel=""  href="https:&#x2F;&#x2F;github.com&#x2F;dotdotdiff&#x2F;dotdotdiff">
+                        Código do site
+                    </a></small>
+        </div>
+    </section>
+
+    <div id="searchModal" class="search-modal js" role="dialog" aria-labelledby="modalTitle">
+    <h1 id="modalTitle" class="visually-hidden">Pesquisar</h1>
+    <div id="modal-content">
+        <div id="searchBar">
+            <div class="search-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                </svg>
+            </div>
+            <input id="searchInput" role="combobox" autocomplete="off" spellcheck="false" aria-expanded="false" aria-controls="results-container" placeholder="Pesquisar…"/>
+            <div id="clear-search" class="close-icon interactive-icon" tabindex="0" role="button" title="Limpar pesquisa">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </div>
+        </div>
+        <div id="results-container">
+            <div id="results-info"><span id="zero_results"> Nenhum resultado encontrado</span>
+                <span id="one_results"> $NUMBER resultado</span>
+                <span id="many_results"> $NUMBER resultados</span><span id="two_results"> $NUMBER resultados</span>
+                <span id="few_results"> $NUMBER resultados</span>
+            </div>
+            <div id="results" role="listbox"></div>
+        </div>
+    </div>
+</div>
+</footer>
+
+</body>
+
+</html>
