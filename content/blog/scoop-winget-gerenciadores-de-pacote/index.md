@@ -2,7 +2,7 @@
 title = "Scoop e Winget - Gerenciando programas no Windows"
 date = 2025-01-15
 updated = 2025-01-15
-description = "Hoje vamos conhecer o Scoop e Winget, gerenciadores de pacote que facilitam nossa vida ao instalar programas no windows"
+description = "Hoje vamos conhecer o Scoop e Winget, gerenciadores de pacote que facilitam nossa vida ao instalar programas no windows."
 
 [taxonomies]
 tags = ["scoop", "windows","winget"]
