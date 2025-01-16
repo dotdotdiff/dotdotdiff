@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base" content="https://dotdotdiff.com">
+
+    
+    <title>DotDotDiff • Aprendendo o básico que você precisa de GIT</title>
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+        
+            <link rel="stylesheet" href="https://dotdotdiff.com/custom_subset.css?h=0b9535a28bc3d5bf2321">
+        
+    
+
+    
+        <link rel="stylesheet" href="https://dotdotdiff.com/main.css?h=4a3dff148c520f191505" />
+
+    <meta name="color-scheme" content="light dark" />
+        <meta name="description" content="Vamos aprender o git, uma ferramenta que é o padrão da indústria de desenvolvimento de software, mas aqui veremos que ela podemos usar ela para além do código." />
+        <meta property="og:description" content="Vamos aprender o git, uma ferramenta que é o padrão da indústria de desenvolvimento de software, mas aqui veremos que ela podemos usar ela para além do código." />
+
+    
+        <meta name="robots" content="index, nofollow" />
+    
+
+    <meta property="og:title" content="Aprendendo o básico que você precisa de GIT" />
+    <meta property="og:type" content="article" />
+
+    
+    
+    
+    
+        
+    
+
+    
+
+    
+    
+    
+        
+    
+    
+
+    
+        
+        
+    
+
+    <meta property="og:image" content="https://dotdotdiff.com/blog/blog.jpg?h=f375947d5b252b336e60" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:image" content="https://dotdotdiff.com/blog/blog.jpg?h=f375947d5b252b336e60" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+<meta property="og:locale" content="pt_BR" />
+
+    <meta property="og:url" content="https:&#x2F;&#x2F;dotdotdiff.com&#x2F;blog&#x2F;git-basico&#x2F;" /><meta property="og:site_name" content="DotDotDiff">
+        <noscript><link rel="stylesheet" href="https://dotdotdiff.com/no_js.css"/></noscript>
+        <script type="text/javascript" src="https://dotdotdiff.com/js/initializeTheme.min.js"></script>
+        <script defer src="https://dotdotdiff.com/js/themeSwitcher.min.js"></script>
+        <script defer src="https://dotdotdiff.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
+        <script defer src="https://dotdotdiff.com/js/lunr/lunrStemmerSupport.min.js"></script>
+            <script defer src="https://dotdotdiff.com/js/lunr/lunr.pt.min.js"></script></head>
+
+
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="nav-title">
+            <a class="home-title" href="https://dotdotdiff.com">DotDotDiff</a>
+        </div>
+            <div class="nav-navs">
+                <ul>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/blog/">
+                                blog
+                                </a>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/archive/">
+                                arquivo
+                                </a>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/tags/">
+                                tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="nav-links no-hover-padding" href="https://dotdotdiff.com/projects/">
+                                projetos
+                                </a>
+                            </li>
+                        <div class="nav-navs" id="menu-icons-group">
+                        <li class="js">
+                            <div role="button" tabindex="0" id="search-button" class="search-icon interactive-icon" title="Clique ou pressione $SHORTCUT para abrir a pesquisa" aria-label="Clique ou pressione $SHORTCUT para abrir a pesquisa">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                                </svg>
+                            </div>
+                        </li>
+
+                        
+                        
+
+                        <li class="theme-switcher-wrapper js"><div
+        title="Alternar para o modo escuro&#x2F;claro"
+        class="theme-switcher"
+        tabindex="0"
+        role="button"
+        aria-label="Alternar para o modo escuro"
+        aria-pressed="false">
+    </div><div
+        title="Resetar para o modo para o padrão"
+        class="theme-resetter arrow"
+        tabindex="0"
+        role="button"
+        aria-hidden="true"
+        aria-label="Resetar para o modo para o padrão">
+    </div>
+
+</li>
+</div>
+                </ul>
+            </div>
+        
+    </nav>
+</header>
+
+    <div class="content">
+
+        
+        
+
+
+
+
+<main>
+    <article>
+        <h1 class="article-title">
+            Aprendendo o básico que você precisa de GIT
+        </h1>
+
+        <ul class="meta">
+                <li>11&#x2F;01&#x2F;2025</li><li title="729 palavras"><span class='separator' aria-hidden='true'>•</span>4 mins de leitura</li><li class="tag"><span class='separator' aria-hidden='true'>•</span>Tags:&nbsp;</li><li class="tag"><a href="https://dotdotdiff.com/tags/git/">git</a>,&nbsp;</li><li class="tag"><a href="https://dotdotdiff.com/tags/tutorial/">tutorial</a></li></ul><ul class="meta last-updated"><li>Atualizado em 11&#x2F;01&#x2F;2025</li><li><span class='separator' aria-hidden='true'>•</span><a href="https://github.com/dotdotdiff/dotdotdiff/commits/main/content/blog&#x2F;git-basico&#x2F;index.md"  rel="">Ver alterações<small>&nbsp;<span class="arrow-corner">↗</span></small></a></li>
+        </ul>
+
+        <section class="body"><h1 id="o-que-e"><a class="header-anchor no-hover-padding" href="#o-que-e" aria-label="Anchor link for: o-que-e"><span class="link-icon" aria-hidden="true"></span></a>
+O que é?</h1>
+<p>Primeiramente você deve estar se perguntando o que é git, se for da área de ti muito provavelmente já deve ter ouvido falar dessa ferramente que é padrão na indústria.</p>
+<p>Agora para os leigos, o Git é um versionador de código (ou texto se preferir), ele é utilizado para termos controles das versões de um código que produzimos, mantendo um histórico que podemos consultar ou até mesmo voltar para algum momento no passado.</p>
+<h1 id="como-instalar"><a class="header-anchor no-hover-padding" href="#como-instalar" aria-label="Anchor link for: como-instalar"><span class="link-icon" aria-hidden="true"></span></a>
+Como instalar?</h1>
+<p>Caso utilize o windows, basta ir no site <a href="https://git-scm.com/downloads">Site oficial do git</a>baixar o instalador e seguir no famoso next e next até o final.</p>
+<p>Caso use o linux, basta instalá-lo via o gerenciador de pacotes de sua distro.</p>
+<h1 id="primeiros-passos-com-o-git"><a class="header-anchor no-hover-padding" href="#primeiros-passos-com-o-git" aria-label="Anchor link for: primeiros-passos-com-o-git"><span class="link-icon" aria-hidden="true"></span></a>
+Primeiros passos com o git</h1>
+<p>Após a instalação precisamos configurar nosso username e email em nosso git, não se preocupem agora pois podemos mudar a qualquer momento essas configurações</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> config<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>global</span> user.name <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>Meu username bonito<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> config<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>global</span> user.email meuEmail@bonito.com</span>
+</span></code></pre>
+<p>Com isso temos nosso user name e email globais já setados no git.</p>
+<h1 id="conceitos-do-versionamento-do-texto-ou-codigo"><a class="header-anchor no-hover-padding" href="#conceitos-do-versionamento-do-texto-ou-codigo" aria-label="Anchor link for: conceitos-do-versionamento-do-texto-ou-codigo"><span class="link-icon" aria-hidden="true"></span></a>
+Conceitos do versionamento do texto (ou código)</h1>
+<p>O git nos permite criar um fluxo de criação do nosso texto em uma árvore de mudanças, conseguindo ir empilhando mudanças horizontalmente como também verticalmente.</p>
+<p>Em outras palavras, nós podemos dar contextos para diferentes para o nosso projeto e isso chamamos de branchs ou galhos.</p>
+<h1 id="branchs-e-as-possibilidades"><a class="header-anchor no-hover-padding" href="#branchs-e-as-possibilidades" aria-label="Anchor link for: branchs-e-as-possibilidades"><span class="link-icon" aria-hidden="true"></span></a>
+Branchs e as possibilidades</h1>
+<p>Agora para exemplificar vamos por a mão na massa, crie uma pasta (diretório) em qualquer lugar em seu sistema, após isso clique com o botão direito e abra a pasta no terminal.</p>
+<p>com o terminal aberto digite:</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> init</span>
+</span></code></pre>
+<p>com esse comando iniciamos nosso projeto git.</p>
+<p>Aqui nós estamos na branch inicial do nosso projeto que é a master ou main a depender do padrão do seu git.</p>
+<p>Agora crie um arquivo txt e escreva qualquer coisa nele.</p>
+<p>Após isso de o comando</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> status</span>
+</span></code></pre>
+<p>Ele deve exibir seu arquivo como untracked, isso significa que o git não tá "analisando" esse arquivo, para o git passar a tratar esse arquivo digite o comando</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> add nome_do_seu_arquivo.txt</span>
+</span></code></pre>
+<p>Pronto, agora seu arquivo já está adicionado ao git e ao digitar <code>git status</code> verá que agora ele mudou para stage.</p>
+<p>Agora commitaremos nossa versão, que é basicamente fazer com que o estado atual do nosso projeto seja salvo em um commit que seria algo como um "pacote de mudanças".</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> commit<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>a</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>m</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>meu primeiro commit<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>A flag <code>-a</code> é para adicionar todos os arquivos para staged e a flag <code>-m</code> é para sinalizar a mensagem que queremos que vem em aspas logo em seguida.</p>
+<p>Com isso temos nossa branch master com nosso primeiro commit salvo, mas e se quisessemos testar novas coisas sem perder o que temos?</p>
+<p>Para isso existe a criação de branchs que vai nos ajudar com esse problema.</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> branch teste</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> checkout teste</span>
+</span></code></pre>
+<p>Criamos nossa branch chamada teste e após isso nós mudamos para ela com o comando <code>git checkout</code>, onde podemos mudar a vontade sem ter o medo de que possa alterar algo na nossa branch main, que é nosso contexto principal.</p>
+<p>Ao ir para a branch de testes, podemos alterar nosso arquivo txt e adicionar mais um novo arquivo e após isso nós commitaremos novamente.</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> commit<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>a</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>m</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>meu commit de testes<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>Mas ai você vai e lembra que precisa de algo que ficou no nosso contexto principal, e ai?</p>
+<p>Agora basta darmos um <code>git checkout main</code> para que possamos voltar ao nosso contexto principal e perceba, todas as mudanças que fizemos na nossa branch teste ficaram somente lá e voltamos a ver o arquivo como estava antes de irmos para outra branch.</p>
+<h1 id="conclusao"><a class="header-anchor no-hover-padding" href="#conclusao" aria-label="Anchor link for: conclusao"><span class="link-icon" aria-hidden="true"></span></a>
+Conclusão</h1>
+<p>Com isso finalizamos o básico que você precisa saber de git, eu recomendo depois dar uma pesquisada sobre o git, é algo muito útil para programadores e para pessoas que trabalham somente com texto, já que nos dá um controle enorme sobre versões e podemos voltar no histórico a vontade.</p>
+<p>Outra coisa também, aqui fizemos tudo via terminal só que não é preciso não tá? Maioria das pessoas utiliza ferramentas com interface gráfica para mexer com o git, o que simplifica ainda mais o processo de edição e também de visualização das versões.</p>
+<p>E por fim, fiz esse tutorialzinho básico de git somente para podermos seguir com os tutoriais que postarei mais a frente aqui e o git é pré-requisito de boa parte deles.</p>
+<p>Caso tenha sugestões de melhorias ou queira fazer algum complemento estarei deixando o link do github com o markdown do site onde poderá fazer PRs com melhorias ou também comentar abaixo suas sugestões.</p>
+
+        </section>
+
+        
+                
+                
+                    
+                        
+                        
+                        
+                    
+                    
+                
+                
+            <nav class="full-width article-navigation">
+                <div><a href="https://dotdotdiff.com/blog/scoop-winget-gerenciadores-de-pacote/" aria-label="Seguinte" aria-describedby="left_title"><span class="arrow">←</span>&nbsp;Seguinte</a>
+                <p aria-hidden="true" id="left_title">Scoop e Winget - Gerenciando programas no Windows</p></div>
+                <div></div>
+            </nav>
+        
+        
+
+        
+            
+            
+            
+
+            
+                
+                
+            
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+        
+        
+            
+
+<div id="comments" class="comments"
+
+
+    data-repo="dotdotdiff&#x2F;dotdotdiff"
+    data-repo-id="R_kgDONp6Oug"
+    data-category="Announcements"
+    data-category-id="DIC_kwDONp6Ous4CmCpy"
+    
+        data-mapping="specific"
+        data-term="git-basico"
+    
+    data-strict="1"
+    data-reactions-enabled="1"
+    
+        data-input-position="top"
+    
+    data-light-theme="noborder_light"
+    data-dark-theme="noborder_dark"
+    
+        data-lang="pt"
+    
+    data-lazy-loading="true"
+    >
+
+
+
+
+    <script src="https://dotdotdiff.com/js/giscus.min.js" async></script>
+
+
+<noscript>You need JavaScript to view the comments.</noscript>
+</div>
+
+        
+
+    </article>
+</main>
+
+
+<span id="copy-success" class="hidden">
+        Copiado!
+    </span>
+    <span id="copy-init" class="hidden">
+        Copiar código para a área de transferência
+    </span>
+    <script defer src="https://dotdotdiff.com/js/copyCodeToClipboard.min.js"></script><script defer src="https://dotdotdiff.com/js/addSrcToCodeBlock.min.js"></script>
+    </div>
+    <footer>
+    <section>
+        <nav class="socials nav-navs"><ul>
+                        
+                            <li>
+                                <a class="nav-links no-hover-padding social" rel=" me"  href="https://github.com/dotdotdiff/dotdotdiff">
+                                    <img loading="lazy" alt="github" title="github" src="https://dotdotdiff.com/social_icons/github.svg">
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            
+        </nav>
+
+        
+        <nav class="nav-navs">
+        </nav>
+
+        <div class="credits">
+            <small>
+                
+
+                
+                Feito Com
+                <a rel=""  href="https://www.getzola.org">Zola</a>
+                e
+                <a rel=""  href="https://github.com/welpo/tabi">tabi</a>
+
+                •
+                    <a rel=""  href="https:&#x2F;&#x2F;github.com&#x2F;dotdotdiff&#x2F;dotdotdiff">
+                        Código do site
+                    </a></small>
+        </div>
+    </section>
+
+    <div id="searchModal" class="search-modal js" role="dialog" aria-labelledby="modalTitle">
+    <h1 id="modalTitle" class="visually-hidden">Pesquisar</h1>
+    <div id="modal-content">
+        <div id="searchBar">
+            <div class="search-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                </svg>
+            </div>
+            <input id="searchInput" role="combobox" autocomplete="off" spellcheck="false" aria-expanded="false" aria-controls="results-container" placeholder="Pesquisar…"/>
+            <div id="clear-search" class="close-icon interactive-icon" tabindex="0" role="button" title="Limpar pesquisa">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </div>
+        </div>
+        <div id="results-container">
+            <div id="results-info"><span id="zero_results"> Nenhum resultado encontrado</span>
+                <span id="one_results"> $NUMBER resultado</span>
+                <span id="many_results"> $NUMBER resultados</span><span id="two_results"> $NUMBER resultados</span>
+                <span id="few_results"> $NUMBER resultados</span>
+            </div>
+            <div id="results" role="listbox"></div>
+        </div>
+    </div>
+</div>
+</footer>
+
+</body>
+
+</html>
