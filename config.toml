@@ -1,0 +1,60 @@
+# The URL the site will be built for
+base_url = "https://dotdotdiff.com"
+title = "DotDotDiff"
+default_language = "pt"
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+theme = "tabi"
+build_search_index = true
+
+
+# Whether to build a search index to be used later on by a JavaScript library
+
+taxonomies = [{ name = "tags", feed = true }]
+
+[search]
+index_format = "elasticlunr_json" # Or the less efficient "elasticlunr_javascript".
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+
+[extra]
+long_date_format = "%d/%m/%Y"
+short_date_format = "%d/%m/%Y"
+theme_switcher = true
+enable_cards_tag_filtering = true
+add_src_to_code_block = true
+copy_button = true
+enable_csp = false
+
+remote_repository_url = "https://github.com/dotdotdiff/dotdotdiff"
+remote_repository_git_platform = "auto"
+remote_repository_branch = "main"
+show_remote_changes = true
+show_remote_source = true
+
+socials = [
+    { name = "github", url = "https://github.com/dotdotdiff/dotdotdiff", icon = "github" },
+]
+[extra.giscus]
+enabled_for_all_posts = true
+automatic_loading = true
+repo = "dotdotdiff/dotdotdiff"
+repo_id = "R_kgDONp6Oug"
+category = "Announcements"
+category_id = "DIC_kwDONp6Ous4CmCpy"
+mapping = "slug"
+strict_title_matching = 1            # 1 to enable, 0 to disable.
+enable_reactions = 1                 # 1 to enable, 0 to disable.
+comment_box_above_comments = true
+light_theme = "noborder_light"
+dark_theme = "noborder_dark"
+lang = ""                            # Leave blank to match the page's language.
+lazy_loading = true
