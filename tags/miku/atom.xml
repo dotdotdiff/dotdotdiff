@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://dotdotdiff.com/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>Isto é um feed web, também conhecido como feed Atom. Subscreva copiando o URL da barra de endereços para o seu leitor de notícias. Visite About Feeds para aprender mais e começar. É grátis.</tabi:about_feeds>
+        <tabi:visit_the_site>Visite o website</tabi:visit_the_site>
+        <tabi:recent_posts>Publicações recentes</tabi:recent_posts>
+        <tabi:last_updated_on>Atualizado em $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>miku</tabi:current_section>
+    </tabi:metadata><title>DotDotDiff - miku</title>
+    <link href="https://dotdotdiff.com/tags/miku/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://dotdotdiff.com/tags/miku/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-01-20T00:00:00+00:00</updated>
+    <id>https://dotdotdiff.com/tags/miku/atom.xml</id><entry xml:lang="pt">
+        <title>Hatsune Miku e os benefícios de comunidades descentralizadas</title>
+        <published>2025-01-20T00:00:00+00:00</published>
+        <updated>2025-01-20T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://dotdotdiff.com/blog/hatsune-miku-e-os-beneficios-de-comunidades-descentralizadas/" type="text/html"/>
+        <id>https://dotdotdiff.com/blog/hatsune-miku-e-os-beneficios-de-comunidades-descentralizadas/</id>
+        <summary type="html">Hatsune Miku é um dos grandes símbolos da internet, além de também ser um exemplo do que uma comunidade descentralizada pode fazer.</summary>
+        </entry>
+</feed>
