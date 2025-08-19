@@ -80,3 +80,48 @@ Evite usar SMS como segundo fator por ele ser facilmente burlável. Se alguém l
 Aqui dá pra usar o Bitwarden também na versão paga ele possui 2FA, mas o recomendado é utilizar outro aplicativo, para não deixar tudo numa cesta só.
 
 Minha recomendação e o que uso é o Aegis.
+
+## Email é sua vida online
+Se ainda usa o gmail como email principal, já passou da hora de trocar ou começar a migrar para opções mais gentis com sua privacidade.
+
+Aqui não tem muito o que dizer, tutamail ou proton são as que mais vão te auxiliar nessa jornada.
+
+Além do email, é bom você buscar também um aliases, que permite vc criar vários apontamentos para o seu email, não deixando seu email de verdade exposto.
+
+Aqui pode utilizar versões pagas destes mesmos emails que falei acima. Por enquanto ainda não utilizo esses aliases, mas em algum momento que testar trago aqui para vocês.
+
+## Criptografe seus dados.
+Se está no windows, ative o bitlocker. Se for Linux utilize o LUKs, com isso seus discos estarão criptografados e preparados para possível acesso físicamente.
+
+Criptografar seus dados é a primeira defesa que você tem contra pessoas que querem bisbilhotar seus dados.
+
+Além das criptografias de disco, você também pode criptografar arquivos e pastas para evitar que drives, como one drive e google drive xeretem seus dados.
+
+Sim, google drive e one drive analisam tudo que você coloca no drive deles, até por isso coisas de pirataria nesses sites acabam sendo derrubadas.
+
+## Seu PC
+Falar que você precisa utilizar linux pode parece algo forçado, mas não é tá, hoje é a opção mais amigável parar privacidade. Muitas distros possuem telemetria opcional e como são de código aberto as pessoas conseguem verificar o que fazem cada coisa.
+
+Sei que o windows possui muitas ferramentas e jogos que só rodam nele (apesar que pra jogo offline o linux tá uma uva), por isso ainda precisa manter seu pc principal como windows.
+
+A dica aqui é, tente ir migrando para ferramentas open source, ou que ao menos tenham em ambos os sistemas para facilitar sua vida em uma possível migração futura.
+
+(O windows recall vai ser uma aberração pro quanto conseguem se intrometer nos dados que produz no seu pc.)
+
+Sobre distro linux, pode pegar qualquer base debian que vai se dar bem.
+
+Minha recomenações são o Linux mint ou Archlinux (esse para quem quer brincar mais.)
+
+## Controle Estatal e de Big Techs
+Já falei mais acima sobre como a produção de dados da gente vem sendo redirecionado para o estado e grandes corporações. O que não sabemos ainda é o que exatamente elas vão fazer com esses dados.
+
+A suposição que mais faz sentido é o avanço de mais controle sobre os individuos, controle do que é verdade ou não e o de mãos de ferro com quem seja visto como inimigo para o interesse seja do estado seja das grandes corporações.
+
+Nesse ponto quase não há distinção sobre como ambos esses poderes são malignos para as pessoas comuns no mundo. Hoje se você é banido do google, nem mesmo aplicativo de banco consegue usar num android, o que é um poder imenso que não devia estar na mão de ninguém.
+ 
+Mesma coisa se seu cpf for colocado numa lista de pessoas "perigosas" seja lá qual regime seja que esteja no poder, basicamente é um assassinato jurídico da sua pessoa.
+
+## Por fim
+Você não precisa ficar bitolado em privacidade e anonimato, apenas basta ir estudando conforme seu interesse for chegando e vai mudando ferramenta por ferramenta.
+
+Nada muito abrupto, torne a mudança algo banal.
