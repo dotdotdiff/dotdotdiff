@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://dotdotdiff.com/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;dotdotdiff.com</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>Isto é um feed web, também conhecido como feed Atom. Subscreva copiando o URL da barra de endereços para o seu leitor de notícias. Visite About Feeds para aprender mais e começar. É grátis.</tabi:about_feeds>
+        <tabi:visit_the_site>Visite o website</tabi:visit_the_site>
+        <tabi:recent_posts>Publicações recentes</tabi:recent_posts>
+        <tabi:last_updated_on>Atualizado em $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>brasil</tabi:current_section>
+    </tabi:metadata><title>DotDotDiff - brasil</title>
+    <link href="https://dotdotdiff.com/tags/brasil/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://dotdotdiff.com/tags/brasil/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2025-09-11T00:00:00+00:00</updated><id>https://dotdotdiff.com/tags/brasil/atom.xml</id><entry xml:lang="pt">
+        <title>Meus Planos Para Sair Do Brasil e Mudar De Vida</title>
+        <published>2025-09-11T00:00:00+00:00</published>
+        <updated>2025-09-11T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://dotdotdiff.com/blog/meus-planos-para-mudar-de-vida-sair-do-brasil/" type="text/html"/>
+        <id>https://dotdotdiff.com/blog/meus-planos-para-mudar-de-vida-sair-do-brasil/</id>
+        </entry>
+</feed>
